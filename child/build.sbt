@@ -1,6 +1,4 @@
-organization := "org.example"
-name := "sbt-base"
-version := "0.0.1-SNAPSHOT"
+name := "child"
 
 // docs for why this is necessary are here: https://github.com/scalatra/sbt-scalatra
 enablePlugins( JavaAppPackaging )

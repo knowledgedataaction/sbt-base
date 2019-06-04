@@ -1,9 +1,9 @@
 import sbt._
 import Dependencies._
 
-organization := "org.example"
+organization in ThisBuild := "org.example"
 name := "sbt-base"
-version := "0.0.1-SNAPSHOT"
+version in ThisBuild := "0.0.1-SNAPSHOT"
 scalaVersion in ThisBuild := "2.12.7"
 
 resolvers in ThisBuild ++= Seq( "Sonatype releases" at "https://oss.sonatype.org/content/repositories/releases",
@@ -13,7 +13,7 @@ resolvers in ThisBuild ++= Seq( "Sonatype releases" at "https://oss.sonatype.org
                                 "JCenter" at "http://jcenter.bintray.com",
                                 "Local Ivy Repository" at s"file://${System.getProperty( "user.home" )}/.ivy2/local/default" )
 
-lazy val root = ( project in file( "." ) )
+lazy val root = ( project in file( "." ) ).aggregate( child )
 
 // placeholder for child modules
 lazy val child = ( project in file( "child" ) ).settings( libraryDependencies ++= slf4j ++ logback )
