@@ -3,4 +3,4 @@
 sbt "set offline := true"
 
 # https://stackoverflow.com/a/44593236
-updateOptions := updateOptions.value.withCachedResolution(true)
+sbt "set updateOptions := updateOptions.value.withCachedResolution(true)"
