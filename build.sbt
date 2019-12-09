@@ -3,7 +3,6 @@ import Dependencies._
 
 organization in ThisBuild := "org.example"
 name := "sbt-base"
-version in ThisBuild := "0.0.1-SNAPSHOT"
 scalaVersion in ThisBuild := "2.12.7"
 
 resolvers in ThisBuild ++= Seq( "Sonatype releases" at "https://oss.sonatype.org/content/repositories/releases",
